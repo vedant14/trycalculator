@@ -1,3 +1,12 @@
+import { Layout, SEO } from "../components";
+
 export default function Home() {
-  return <p className="text-3xl font-bold underline">Hello world!</p>;
+  return (
+    <div>
+      <SEO />
+      <Layout>
+        <div>vedant</div>
+      </Layout>
+    </div>
+  );
 }

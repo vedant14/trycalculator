@@ -1,1 +1,3 @@
-export * from "./QuizResult";
+export * from "./SEO";
+export * from "./Layout";
+export * from "./Header";
