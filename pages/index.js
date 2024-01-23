@@ -1,11 +1,11 @@
-import { Layout, SEO } from "../components";
+import { Card, Layout, SEO } from "../components";
 
 export default function Home() {
   return (
     <div>
       <SEO />
       <Layout>
-        <div>vedant</div>
+        <Card />
       </Layout>
     </div>
   );
