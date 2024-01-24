@@ -4,14 +4,7 @@ import DatePicker from "react-datepicker";
 export function Card() {
   const [startDate, setStartDate] = useState(new Date());
   const [currentDate, setCurrentDate] = useState(new Date());
-  function range(start, end, step) {
-  const result = [];
-  for (let i = start; i < end; i += step) {
-    result.push(i);
-  }
-  return result;
-}
-  const years = range(1990, getYear(new Date()) + 1, 1);
+  const years = range(1990, new Date().getFullYear() + 1, 1);
   const months = [
     "January",
     "February",
