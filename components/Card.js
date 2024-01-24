@@ -1,6 +1,15 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 
+function range(start, end, step) {
+  const result = [];
+  for (let i = start; i < end; i += step) {
+    result.push(i);
+  }
+  return result;
+}
+
+
 export function Card() {
   const [startDate, setStartDate] = useState(new Date());
   const [currentDate, setCurrentDate] = useState(new Date());
