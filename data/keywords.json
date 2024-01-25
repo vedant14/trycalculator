@@ -1,0 +1,30 @@
+{
+  "calculatorFamily": [
+    {
+      "name": "General",
+      "calculators": [
+        {
+          "name": "Age Calculator",
+          "keywords": ["best age calculators"]
+        },
+        {
+          "name": "Child Age Calculator",
+          "keywords": ["best age calculators"]
+        }
+      ]
+    },
+    {
+      "name": "Finance",
+      "calculators": [
+        {
+          "name": "Income Tax Calculator",
+          "keywords": ["best income tax calculators"]
+        },
+        {
+          "name": "House Tax Calculator",
+          "keywords": ["best income tax calculators"]
+        }
+      ]
+    }
+  ]
+}
