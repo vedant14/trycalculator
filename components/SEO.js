@@ -4,7 +4,7 @@ export function SEO({ title, description }) {
   if (title === undefined) {
     title = "Calculators";
   } else {
-    title = title + " | Calculator";
+    title = title;
   }
   if (description === undefined) {
     description =

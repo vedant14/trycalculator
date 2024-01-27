@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { ageCalculator } from "@/utils/ageCalculator";
 import { CustomDatePicker } from "@/atoms/index";
+import { reverseSlugify } from "@/utils/sharedFunctions";
 
-export function AgeCalculatorForm() {
+export function AgeCalculatorForm({ title }) {
   const [startDate, setStartDate] = useState(new Date());
   const [currentDate, setCurrentDate] = useState(new Date());
   const [age, setAge] = useState(null);
@@ -14,7 +15,7 @@ export function AgeCalculatorForm() {
     <div>
       <div className="px-4 py-5 sm:px-6">
         <h3 className="text-lg leading-6 font-medium text-gray-900">
-          Age Calculator
+          {title ? reverseSlugify(title) : "Age Calculator"}
         </h3>
         <p className="mt-4 max-w-2xl text-sm text-gray-500">
           The Age Calculator can determine the age or interval between two
