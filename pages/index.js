@@ -8,7 +8,7 @@ export default function Home() {
       <SEO />
       <Layout>
         <Card>
-          <div>All Calculators</div>
+          <div className="text-xl">All Calculators</div>
           <ul>
             {keywordData.map((family, i) => (
               <li key={i}>
@@ -17,6 +17,7 @@ export default function Home() {
                   {family.calculators.map((caclculator, i) => (
                     <li className="list-disc" key={i}>
                       <Link
+                        className="underline"
                         href={`${slugify(family.name)}/${slugify(
                           caclculator.name
                         )}/${slugify(caclculator.keywords[0])}`}

@@ -13,6 +13,7 @@ export function SEO({ title, description }) {
   return (
     <Head>
       <title>{title}</title>
+      <meta name="google-adsense-account" content="ca-pub-9462943595284125" />
       <meta name="description" content={description} />
       <meta property="og:url" content="www.vedantlohbare.com" />
       <meta property="og:type" content="website" />
