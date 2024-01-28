@@ -1,5 +1,4 @@
 import keywordData from "@/data/keywords.json";
-import { AgeCalculatorForm } from "@/components/forms/AgeCalculatorForm";
 import { SEO, Card, Layout } from "@/components/index";
 import { slugify, reverseSlugify } from "@/utils/sharedFunctions";
 import { CalculatorDecider } from "@/components/forms";
@@ -24,11 +23,14 @@ export async function getStaticPaths() {
   });
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 
 function CalculatorPage({ calculatorData }) {
+  if (!calculatorData) {
+    return null;
+  }
   return (
     <div>
       <SEO
@@ -76,7 +78,6 @@ export async function getStaticProps({ params }) {
       notFound: true,
     };
   }
-
   return {
     props: {
       calculatorData: {
