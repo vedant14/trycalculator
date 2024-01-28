@@ -7,6 +7,17 @@ export default function Home() {
     <div>
       <SEO />
       <Layout>
+        <amp-ad
+          width="100vw"
+          height="320"
+          type="adsense"
+          data-ad-client="ca-pub-9462943595284125"
+          data-ad-slot="7044592325"
+          data-auto-format="rspv"
+          data-full-width=""
+        >
+          <div overflow=""></div>
+        </amp-ad>
         <Card>
           <div className="text-xl">All Calculators</div>
           <ul>

@@ -6,7 +6,13 @@ class MyDocument extends Document {
       <Html lang="en">
         {" "}
         {/* Specify the lang attribute here */}
-        <Head>{/* Your head tags, meta tags, styles, and scripts */}</Head>
+        <Head>
+          <script
+            async
+            custom-element="amp-ad"
+            src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
