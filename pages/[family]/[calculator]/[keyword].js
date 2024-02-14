@@ -1,7 +1,6 @@
 import keywordData from "@/data/keywords.json";
-import { SEO, Card, Layout } from "@/components/index";
+import { SEO, Card, Layout, CalculatorDecider } from "@/components";
 import { slugify, reverseSlugify } from "@/utils/sharedFunctions";
-import { CalculatorDecider } from "@/components/forms";
 
 export async function getStaticPaths() {
   const paths = [];
