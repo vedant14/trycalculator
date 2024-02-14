@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Card, Layout, SEO } from "../components";
+import { Card, Layout, SEO } from "@/components";
 import keywordData from "@/data/keywords.json";
 import { slugify } from "@/utils/sharedFunctions";
 export default function Home() {

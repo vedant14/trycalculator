@@ -27,7 +27,7 @@ export async function getStaticPaths() {
   };
 }
 
-function CalculatorPage({ calculatorData }) {
+export default function CalculatorPage({ calculatorData }) {
   if (!calculatorData) {
     return null;
   }
@@ -49,8 +49,6 @@ function CalculatorPage({ calculatorData }) {
     </div>
   );
 }
-
-export default CalculatorPage;
 
 export async function getStaticProps({ params }) {
   const { family, calculator, keyword } = params;
