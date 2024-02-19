@@ -59,7 +59,7 @@ export default function Page({ blog }) {
   return (
     <Layout>
       <SEO title={blog.title} description={blog.title} />
-      <p className="text-xl my-4 font-medium">{blog.title}</p>
+      <p className="text-3xl my-4 font-medium">{blog.title}</p>
       <article className="prose">
         <ReactMarkdown className="leading-8 space-y-4">
           {blog.content.markdown}

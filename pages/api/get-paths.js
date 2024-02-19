@@ -10,7 +10,19 @@ const client = new ApolloClient({
 const GET_POSTS = gql`
   query Posts {
     posts {
+      id
       slug
+      title
+      coverImage {
+        url(transformation: { image: { resize: { height: 300, width: 400 } } })
+      }
+      author {
+        title
+        name
+        picture {
+          url(transformation: { image: { resize: { height: 30, width: 30 } } })
+        }
+      }
     }
   }
 `;

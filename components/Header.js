@@ -1,32 +1,11 @@
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import Link from "next/link";
+import topCalculators from "@/data/top-calculators.json";
 
-const products = [
-  {
-    name: "Analytics",
-    description: "Get a better understanding of your traffic",
-    href: "#",
-  },
-  {
-    name: "Engagement",
-    description: "Speak directly to your customers",
-    href: "#",
-  },
-  {
-    name: "Security",
-    description: "Your customers’ data will be safe and secure",
-    href: "#",
-  },
-  {
-    name: "Integrations",
-    description: "Connect with third-party tools",
-    href: "#",
-  },
-];
 const callsToAction = [
-  { name: "All calculators", href: "#", primary: true },
-  { name: "Report a bug", href: "#" },
+  { name: "All calculators", link: "#", primary: true },
+  { name: "Report a bug", link: "#" },
 ];
 
 export function Header() {
@@ -75,7 +54,7 @@ export function Header() {
             >
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
-                  {products.map((item) => (
+                  {topCalculators.map((item) => (
                     <div
                       key={item.name}
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
@@ -85,13 +64,13 @@ export function Header() {
                       </div>
                       <div className="flex-auto">
                         <a
-                          href={item.href}
+                          href={item.link}
                           className="block font-semibold text-gray-900"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
+                        <p className="mt-1 text-gray-600">{item.name}</p>
                       </div>
                     </div>
                   ))}
@@ -115,16 +94,12 @@ export function Header() {
               </Popover.Panel>
             </Transition>
           </Popover>
-
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Features
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Marketplace
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Company
-          </a>
+          <Link
+            href="/blogs"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            Blogs
+          </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
@@ -167,11 +142,11 @@ export function Header() {
                         Top Calculators
                       </Disclosure.Button>
                       <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...products, ...callsToAction].map((item) => (
+                        {[...topCalculators, ...callsToAction].map((item) => (
                           <Disclosure.Button
                             key={item.name}
                             as="a"
-                            href={item.href}
+                            href={item.link}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             {item.name}
@@ -181,24 +156,12 @@ export function Header() {
                     </>
                   )}
                 </Disclosure>
-                <a
-                  href="#"
+                <Link
+                  href="/blogs"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Features
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Company
-                </a>
+                  All Blogs
+                </Link>
               </div>
               <div className="py-6">
                 <a

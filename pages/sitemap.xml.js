@@ -35,7 +35,7 @@ async function generatePaths() {
 
   const blogPaths = await getAllPostPaths();
   blogPaths.forEach((blog) => {
-    paths.push(`${EXTERNAL_DATA_URL}/blog/${blog.params.blog}`);
+    paths.push(`${EXTERNAL_DATA_URL}/blogs/${blog.params.blog}`);
   });
 
   return paths;
