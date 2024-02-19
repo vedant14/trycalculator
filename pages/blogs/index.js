@@ -46,7 +46,7 @@ export default function AllBlogs({ blogs }) {
                 <div className="flex-shrink-0">
                   <img
                     className="h-full w-full object-cover"
-                    src={post.coverImage.url}
+                    src={post.coverImage?.url}
                     alt=""
                   />
                 </div>
