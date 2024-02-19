@@ -61,7 +61,9 @@ export default function Page({ blog }) {
       <SEO title={blog.title} description={blog.title} />
       <p className="text-xl my-4 font-medium">{blog.title}</p>
       <article className="prose">
-        <ReactMarkdown>{blog.content.markdown}</ReactMarkdown>
+        <ReactMarkdown className="leading-8 space-y-4">
+          {blog.content.markdown}
+        </ReactMarkdown>
       </article>
     </Layout>
   );
